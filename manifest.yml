@@ -1,0 +1,15 @@
+applications:
+- name: finAdviser
+  instances: 1
+  memory: 512M
+  disk_quota: 1024M
+  routes:
+  - route: finAdviser.cfapps.io
+  command: node server.js
+  env:
+    OPTIMIZE_MEMORY: "true"
+    application_UUID: "7d3e78ec-b4fc-4a43-9a30-bca985d5a0e9"
+    application_Name: "finAdviser"
+    api-key: "XXXX-XXXX-XXXX-XXXX"
+    api-uri: "https://users-signup.cfapps.io/users"
+  stack: cflinuxfs2
